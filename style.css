@@ -10,7 +10,6 @@ body {
 }
 
 /* PRE-PAGE */
-
 .wrapper {
   position: fixed;
   inset: 0;
@@ -38,36 +37,39 @@ header {
   position: absolute;
   top: -100%;
   animation: anim4 2s forwards 2.5s;
+  margin-top: 20px;
 }
 
 #logo {
   float: left;
   margin-left: 100px;
-  margin-top: 20px;
 }
 
 #logo img {
   width: 50px;
 }
 
-nav {
+nav a {
   font-family: "Sans-serif";
   font-size: 14px;
   color: black;
   letter-spacing: 2px;
-  margin-right: 150px;
-  margin-top: 20px;
-  float: right;
+  text-decoration: none;
 }
 
 nav ul {
   list-style: none;
+  margin-right: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  float: right;
 }
 
 nav ul li {
-  display: inline-block;
   margin-left: 100px;
 }
+
 @keyframes anim4 {
   from {
     top: -100%;
@@ -129,7 +131,7 @@ nav ul li {
   height: auto;
   font-family: "Spartan";
   color: black;
-  font-size: 10em;
+  font-size: 66px;
   font-weight: 500;
   line-height: 130px;
   position: absolute;
