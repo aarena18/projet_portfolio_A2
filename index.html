@@ -3,8 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ambre Arena - French Web Developper -</title>
+    <link rel="shortcut icon" type="image/png" href="img/logoW.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <div class="load"></div>
+    </div>
+    <script>
+      const fadeOut = () => {
+        const loadWrapper = document.querySelector(".wrapper");
+        loadWrapper.classList.add("fade");
+      };
+      window.addEventListener("load", fadeOut);
+    </script>
+  </body>
 </html>
