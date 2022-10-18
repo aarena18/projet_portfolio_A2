@@ -1,10 +1,16 @@
+/* GENERAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 50px;
   font-family: sans-serif;
 }
+body {
+  background: white;
+}
+
+/* PRE-PAGE */
+
 .wrapper {
   position: fixed;
   inset: 0;
@@ -17,4 +23,132 @@
 .fade {
   opacity: 0;
   visibility: hidden;
+}
+
+.logoLoad img {
+  height: 100px;
+  width: 100px;
+  place-items: center;
+}
+
+/* HEADER */
+header {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 2s forwards 2.5s;
+}
+
+#logo {
+  float: left;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+#logo img {
+  width: 50px;
+}
+
+nav {
+  font-family: "Sans-serif";
+  font-size: 14px;
+  color: black;
+  letter-spacing: 2px;
+  margin-right: 150px;
+  margin-top: 20px;
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 100px;
+}
+@keyframes anim4 {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+/* MAIN */
+
+/* BANNER */
+#photo_banner {
+  opacity: 15%;
+  text-shadow: 2px black;
+  width: 600px;
+  height: 1100px;
+  background-image: url("img/gradient_1.jpg");
+  background-image: no-repeat;
+  position: absolute;
+  bottom: -100%;
+  left: 30%;
+  animation: anim 2s forwards, anim2 3s forwards 3s;
+}
+
+#photo_banner:after {
+  content: "";
+  position: absolute;
+  width: 530 px;
+  height: 625px;
+  background-image: url("img/gradient_1.jpg");
+  background-image: no-repeat;
+  left: 0px;
+  z-index: 100;
+}
+
+@keyframes anim {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+
+@keyframes anim2 {
+  from {
+    left: 30%;
+    width: 530px;
+  }
+  to {
+    width: 0px;
+    left: 50%;
+  }
+}
+
+#text_banner {
+  width: auto;
+  height: auto;
+  font-family: "Spartan";
+  color: black;
+  font-size: 10em;
+  font-weight: 500;
+  line-height: 130px;
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  overflow: hidden;
+}
+
+#text {
+  padding: 25px;
+  position: relative;
+  left: -100%;
+  animation: anim3 2s forwards 3s;
+}
+@keyframes anim3 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
 }
