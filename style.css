@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: poppins, sans-serif;
 }
 body {
   background: white;
@@ -50,7 +50,6 @@ header {
 }
 
 nav a {
-  font-family: "Sans-serif";
   font-size: 14px;
   color: black;
   letter-spacing: 2px;
@@ -129,7 +128,6 @@ nav ul li {
 #text_banner {
   width: auto;
   height: auto;
-  font-family: "Spartan";
   color: black;
   font-size: 66px;
   font-weight: 500;
