@@ -1,0 +1,63 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambre Arena | French Web Developper | CONTACT</title>
+    <link rel="stylesheet" href="../styles/contact.css" />
+  </head>
+  <body>
+    <section class="text">
+      <div class="big">
+        <p>UN PROJET EN TÊTE?</p>
+      </div>
+      <div class="small1">
+        <p>Parlons-en 💫</p>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contactez-nous">
+        <form action="#" method="post">
+          <div>
+            <label for="nom">Nom</label>
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              placeholder="Prénom Nom"
+              required
+            />
+          </div>
+          <div>
+            <label for="email">e-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="adresse@mail.com"
+              required
+            />
+          </div>
+          <div>
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Bonjour Ambre! je vous contacte car...."
+              required
+            ></textarea>
+          </div>
+          <div>
+            <button type="submit">Envoyer mon message</button>
+          </div>
+        </form>
+      </div>
+      <!--<?php
+            if (isset($_POST['Votre message'])) {
+                $retour = mail('ambrearena@gmail.com', 'Envoi depuis la page Contact', $_POST['Votre message'], 'From: xxx@xxx.xxx' . "\r\n" . 'Reply-to: ' . $_POST['email']);
+                if($retour)
+                echo '<p>Votre message a bien été envoyé.</p>';
+            }
+        ?>-->
+    </section>
+  </body>
+</html>
