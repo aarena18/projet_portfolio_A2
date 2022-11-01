@@ -12,7 +12,7 @@ body {
 /*--------------------------------------------------------------*/
 
 /* PRE-PAGE */
-.wrapper {
+/*.wrapper {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -36,7 +36,6 @@ body {
 
 /* HEADER */
 header {
-  overflow: hidden;
   width: 100%;
   position: absolute;
   top: -100%;
@@ -73,54 +72,169 @@ nav ul li {
   margin-left: 100px;
 }
 
+/* ANIMATION HOVER */
+
+nav a:hover {
+  transition: 0.3s;
+  color: rgb(228, 147, 238);
+}
 /* MAIN */
 
 /*--------------------------------------------------------------*/
 
 /* BANNER */
-#photo_banner {
-  opacity: 15%;
-  text-shadow: 2px black;
-  width: 600px;
-  height: 1100px;
-  background-image: url("img/gradient_1.jpg");
-  background-image: no-repeat;
-  position: absolute;
-  bottom: -100%;
-  left: 30%;
-  animation: animImg1 2s forwards, animImg2 3s forwards 3s;
-}
 
-#photo_banner:after {
-  content: "";
-  position: absolute;
-  width: 530 px;
-  height: 625px;
-  background-image: url("img/gradient_1.jpg");
-  background-image: no-repeat;
-  left: 0px;
-  z-index: 100;
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/gradient.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  /*TEXTE*/
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
 }
 
 #text_banner {
-  width: auto;
-  height: auto;
-  color: black;
-  font-size: 66px;
-  font-weight: 500;
-  line-height: 130px;
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: uppercase;
   position: absolute;
-  top: 250px;
-  left: 100px;
-  overflow: hidden;
+  left: -100%;
+  animation: animText 2s forwards 2.5s;
 }
 
-#text {
-  padding: 25px;
-  position: relative;
-  left: -100%;
-  animation: animText 2s forwards 3s;
+/*--------------------------------------------------------------*/
+
+/*  SECTION PROJET */
+#projet {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(236, 195, 195);
 }
+/*--------------------------------------------------------------*/
+
+/*  SECTION ABOUT */
+#about {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(101, 113, 122);
+}
+/*--------------------------------------------------------------*/
+
+/*  SECTION CONTACT */
+#contact {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(199, 232, 250);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/*TEXT*/
+.text {
+  width: 400px;
+  height: 400px;
+  font-size: large;
+  line-height: 50px;
+  position: relative;
+  top: 30%;
+  left: -100%;
+  animation: animText 2s forwards 2.5s;
+}
+.big {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* FORM */
+.contact {
+  display: flex;
+  justify-content: center;
+  color: #303030;
+  position: relative;
+  top: 15%;
+  right: -100%;
+  animation: animForm 2s forwards 0.3s;
+}
+
+label {
+  font-family: sans-serif;
+}
+.contactez-nous {
+  width: 700px;
+  padding: 0 50px 0 50px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(228, 147, 238, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 83px;
+  margin-top: 25px;
+}
+
+textarea {
+  background-color: #d0b8e7;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 200;
+  box-shadow: 0 2px 12px 0 rgba(228, 147, 238, 0.37);
+}
+
+input {
+  height: 50px;
+  padding-left: 10px;
+  background: #d0b8e7;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 12px 0 rgba(228, 147, 238, 0.37);
+}
+
+#message {
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+}
+
+button {
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 450px;
+  max-width: 500px;
+  height: 60px;
+  font-weight: 500;
+  font-size: 18px;
+  background: #b296cd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ANIMATION HOVER */
+
+button:hover {
+  transition: 0.3s;
+  color: rgb(213, 229, 237);
+}
+
+/*--------------------------------------------------------------*/
+
+/*  FOOTER */
 
 /*--------------------------------------------------------------*/
 
@@ -134,31 +248,20 @@ nav ul li {
   }
 }
 
-@keyframes animImg1 {
-  from {
-    bottom: -100%;
-  }
-  to {
-    bottom: 0%;
-  }
-}
-
-@keyframes animImg2 {
-  from {
-    left: 30%;
-    width: 530px;
-  }
-  to {
-    width: 0px;
-    left: 50%;
-  }
-}
-
 @keyframes animText {
   from {
     left: -100%;
   }
   to {
-    left: 0%;
+    left: 10%;
+  }
+}
+
+@keyframes animForm {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 5%;
   }
 }

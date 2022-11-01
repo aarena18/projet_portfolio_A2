@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- PRE-PAGE -->
-    <section class="loading">
+    <!--<section class="loading">
       <div class="wrapper">
         <div class="load">
           <div class="logoLoad">
@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <!-- HEADER -->
     <header>
@@ -29,11 +29,9 @@
           <li><a href="#">HOME</a></li>
           <li><a href="#">PROJETS</a></li>
           <li><a href="#">ABOUT</a></li>
-          <li><a href="pages/contact.html">CONTACT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
-        
-      </div>
     </header>
 
     <!-- MAIN -->
@@ -44,8 +42,64 @@
           <div id="text">Ambre Arena<br />Dev web<span>|</span>Junior</div>
         </div>
       </section>
-    </main>
 
+      <!-- PROJET -->
+      <section id="projet"></section>
+
+      <!-- ABOUT -->
+      <section id="about"></section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <!-- TEXT -->
+        <section class="text">
+          <div class="big">
+            <h2>UN PROJET EN TÊTE?</h2>
+            <p>Parlons-en 💫</p>
+          </div>
+        </section>
+        <!-- FORM -->
+        <section class="contact">
+          <div class="contactez-nous">
+            <form action="#" method="post">
+              <div>
+                <label for="nom">Votre nom et prénom</label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Prénom Nom"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email">Votre e-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="adresse@mail.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="message">Votre message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Bonjour Ambre! Je vous contacte car...."
+                  required
+                ></textarea>
+              </div>
+              <div>
+                <button type="submit">Envoyer mon message</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!--
     <script>
       /* PRE-PAGE */
       const fadeOut = () => {
@@ -55,6 +109,6 @@
       window.addEventListener("load", fadeOut);
 
       /**/
-    </script>
+    </script>-->
   </body>
 </html>
