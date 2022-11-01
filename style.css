@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: poppins, sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   background: white;
@@ -84,7 +85,7 @@ nav a:hover {
 
 /* BANNER */
 
-.banner {
+#banner {
   width: 100%;
   height: 100vh;
   background-image: url(img/gradient.jpg);
@@ -118,6 +119,90 @@ nav a:hover {
   width: 100%;
   background-color: rgb(236, 195, 195);
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  padding: 30px;
+}
+
+.projet1 {
+  grid-area: 1 / 1 / 2 / 2;
+  height: 60vh;
+  margin-top: 25%;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.projet2 {
+  grid-area: 1 / 2 / 2 / 3;
+  height: 60vh;
+  margin-top: 25%;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.projet3 {
+  grid-area: 1 / 3 / 2 / 4;
+  height: 60vh;
+  margin-top: 25%;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* INTERIEUR CARDS PROJETS */
+
+.cardImg {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.cardImg img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.textCard {
+  padding: 2rem;
+}
+
+.textCard .desc {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #737373;
+  display: block;
+  text-decoration: none;
+}
+.textCard .cardTitle {
+  margin: 1rem 0;
+  color: #303030;
+}
+
+.textCard .cardCont {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #737373;
+  margin: 0;
+}
+
 /*--------------------------------------------------------------*/
 
 /*  SECTION ABOUT */
@@ -234,8 +319,69 @@ button:hover {
 
 /*--------------------------------------------------------------*/
 
-/*  FOOTER */
+/* FOOTER */
 
+#info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(155, 203, 231);
+}
+#info ul {
+  list-style: none;
+  font-size: small;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+#info .line {
+  width: 50%;
+  height: 1.5px;
+  background-color: #737373;
+  margin: 10px;
+}
+#info li a {
+  text-decoration: none;
+  color: #303030;
+}
+
+.container1 li {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 300;
+  padding: 20px 40px 30px;
+}
+
+.socials li {
+  padding: 15px;
+}
+
+.logoF img {
+  width: 30px;
+  height: 28px;
+}
+
+.container2 li {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 100;
+  padding: 20px;
+}
+
+/* ANIMATION HOVER */
+
+.container2 li:hover {
+  transition: 0.3s;
+  color: rgb(156, 160, 160);
+}
+
+.container2 li a:hover {
+  transition: 0.3s;
+  color: rgb(156, 160, 160);
+}
 /*--------------------------------------------------------------*/
 
 /* ANIMATIONS KEYFRAMES */
@@ -265,3 +411,5 @@ button:hover {
     right: 5%;
   }
 }
+
+/*--------------------------- END ----------------------------*/
