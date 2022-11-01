@@ -9,6 +9,8 @@ body {
   background: white;
 }
 
+/*--------------------------------------------------------------*/
+
 /* PRE-PAGE */
 .wrapper {
   position: fixed;
@@ -30,13 +32,15 @@ body {
   place-items: center;
 }
 
+/*--------------------------------------------------------------*/
+
 /* HEADER */
 header {
   overflow: hidden;
   width: 100%;
   position: absolute;
   top: -100%;
-  animation: anim4 2s forwards 2.5s;
+  animation: animNav 2s forwards 2.5s;
   margin-top: 20px;
 }
 
@@ -69,16 +73,9 @@ nav ul li {
   margin-left: 100px;
 }
 
-@keyframes anim4 {
-  from {
-    top: -100%;
-  }
-  to {
-    top: 0%;
-  }
-}
-
 /* MAIN */
+
+/*--------------------------------------------------------------*/
 
 /* BANNER */
 #photo_banner {
@@ -91,7 +88,7 @@ nav ul li {
   position: absolute;
   bottom: -100%;
   left: 30%;
-  animation: anim 2s forwards, anim2 3s forwards 3s;
+  animation: animImg1 2s forwards, animImg2 3s forwards 3s;
 }
 
 #photo_banner:after {
@@ -103,26 +100,6 @@ nav ul li {
   background-image: no-repeat;
   left: 0px;
   z-index: 100;
-}
-
-@keyframes anim {
-  from {
-    bottom: -100%;
-  }
-  to {
-    bottom: 0%;
-  }
-}
-
-@keyframes anim2 {
-  from {
-    left: 30%;
-    width: 530px;
-  }
-  to {
-    width: 0px;
-    left: 50%;
-  }
 }
 
 #text_banner {
@@ -142,9 +119,42 @@ nav ul li {
   padding: 25px;
   position: relative;
   left: -100%;
-  animation: anim3 2s forwards 3s;
+  animation: animText 2s forwards 3s;
 }
-@keyframes anim3 {
+
+/*--------------------------------------------------------------*/
+
+/* ANIMATIONS KEYFRAMES */
+@keyframes animNav {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes animImg1 {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+
+@keyframes animImg2 {
+  from {
+    left: 30%;
+    width: 530px;
+  }
+  to {
+    width: 0px;
+    left: 50%;
+  }
+}
+
+@keyframes animText {
   from {
     left: -100%;
   }

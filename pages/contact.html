@@ -6,58 +6,70 @@
     <link rel="stylesheet" href="../styles/contact.css" />
   </head>
   <body>
-    <section class="text">
-      <div class="big">
-        <p>UN PROJET EN TÊTE?</p>
+    <!-- HEADER -->
+    <header>
+      <div id="logo">
+        <a href="../index.html"
+          ><img src="../img/logoBlack.png" alt="logo"
+        /></a>
       </div>
-      <div class="small1">
-        <p>Parlons-en 💫</p>
-      </div>
-    </section>
-    <section class="contact">
-      <div class="contactez-nous">
-        <form action="#" method="post">
-          <div>
-            <label for="nom">Nom</label>
-            <input
-              type="text"
-              id="nom"
-              name="nom"
-              placeholder="Prénom Nom"
-              required
-            />
-          </div>
-          <div>
-            <label for="email">e-mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="adresse@mail.com"
-              required
-            />
-          </div>
-          <div>
-            <label for="message">Votre message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Bonjour Ambre! je vous contacte car...."
-              required
-            ></textarea>
-          </div>
-          <div>
-            <button type="submit">Envoyer mon message</button>
-          </div>
-        </form>
-      </div>
-      <!--<?php
-            if (isset($_POST['Votre message'])) {
-                $retour = mail('ambrearena@gmail.com', 'Envoi depuis la page Contact', $_POST['Votre message'], 'From: xxx@xxx.xxx' . "\r\n" . 'Reply-to: ' . $_POST['email']);
-                if($retour)
-                echo '<p>Votre message a bien été envoyé.</p>';
-            }
-        ?>-->
-    </section>
+      <nav>
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="#">PROJETS</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <!-- TEXT -->
+      <section class="text">
+        <div class="big">
+          <h2>UN PROJET EN TÊTE?</h2>
+          <p>Parlons-en 💫</p>
+        </div>
+      </section>
+      <!-- FORM -->
+      <section class="contact">
+        <div class="contactez-nous">
+          <form action="#" method="post">
+            <div>
+              <label for="nom">Nom</label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                placeholder="Prénom Nom"
+                required
+              />
+            </div>
+            <div>
+              <label for="email">e-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="adresse@mail.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="message">Votre message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Bonjour Ambre! je vous contacte car...."
+                required
+              ></textarea>
+            </div>
+            <div>
+              <button type="submit">Envoyer mon message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
