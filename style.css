@@ -3,17 +3,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: poppins, sans-serif;
+  font-family: outfit, poppins, sans-serif;
   scroll-behavior: smooth;
 }
 body {
   background: white;
 }
+* span {
+  color: #8c87c0;
+}
+* p {
+  color: #b9b7d9;
+}
+* h2 {
+  color: #605cc1;
+}
+* a {
+  color: #2b2b2b;
+}
 
 /*--------------------------------------------------------------*/
 
 /* PRE-PAGE */
-/*.wrapper {
+.wrapper {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -55,7 +67,6 @@ header {
 
 nav a {
   font-size: 14px;
-  color: black;
   letter-spacing: 2px;
   text-decoration: none;
 }
@@ -76,8 +87,8 @@ nav ul li {
 /* ANIMATION HOVER */
 
 nav a:hover {
-  transition: 0.3s;
-  color: rgb(228, 147, 238);
+  transition: 0.3s ease-out;
+  color: #605cc1;
 }
 /* MAIN */
 
@@ -94,7 +105,6 @@ nav a:hover {
   background-size: cover;
 
   /*TEXTE*/
-  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,6 +113,7 @@ nav a:hover {
 }
 
 #text_banner {
+  color: #2b2b2b;
   font-size: 50px;
   line-height: 80px;
   font-weight: 600;
@@ -113,31 +124,31 @@ nav a:hover {
   animation: animText 2s forwards 2.5s;
 }
 
-#text_banner span {
-  color: #737373;
-}
-
 /*--------------------------------------------------------------*/
 
 /*  SECTION PROJET */
 #projet {
   height: 100vh;
   width: 100%;
-  background-color: rgb(236, 195, 195);
+  background-color: #d9d9d9;
+}
+#projet h2 {
+  text-align: center;
+  padding-top: 70px;
+  font-size: 27px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  padding: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  padding: 50px;
 }
 
 .projet1 {
   grid-area: 1 / 1 / 2 / 2;
   height: 60vh;
-  margin-top: 25%;
+  margin-top: 5%;
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
   backdrop-filter: blur(7px);
   background-color: rgba(255, 255, 255, 0.5);
@@ -151,7 +162,7 @@ nav a:hover {
 .projet2 {
   grid-area: 1 / 2 / 2 / 3;
   height: 60vh;
-  margin-top: 25%;
+  margin-top: 5%;
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
   backdrop-filter: blur(7px);
   background-color: rgba(255, 255, 255, 0.5);
@@ -161,19 +172,7 @@ nav a:hover {
   flex-direction: column;
   align-items: flex-start;
 }
-.projet3 {
-  grid-area: 1 / 3 / 2 / 4;
-  height: 60vh;
-  margin-top: 25%;
-  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+
 /* INTERIEUR CARDS PROJETS */
 
 .cardImg {
@@ -185,8 +184,8 @@ nav a:hover {
   max-width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
-  transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .textCard {
@@ -198,19 +197,18 @@ nav a:hover {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
-  color: #737373;
   display: block;
   text-decoration: none;
+  color: #8c87c0;
 }
 .textCard .cardTitle {
   margin: 1rem 0;
-  color: #303030;
+  color: #2b2b2b;
 }
 
 .textCard .cardCont {
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #737373;
   margin: 0;
 }
 
@@ -220,7 +218,6 @@ nav a:hover {
   align-self: center;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #737373;
   margin-bottom: 2rem;
   background-color: #fff;
   border-radius: 5px;
@@ -229,14 +226,12 @@ nav a:hover {
   margin: 2.2rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: #303030;
   font-weight: 600;
 }
 /* HOVER CARDS */
 .cardImg img:hover {
-  transform: scale(1.3);
-  transform: scale(1.3);
-  backdrop-filter: blur(8px);
+  filter: blur(1px);
+  transform: scale(1.2);
 }
 
 /*--------------------------------------------------------------*/
@@ -245,27 +240,31 @@ nav a:hover {
 #about {
   height: 100vh;
   width: 100%;
-  background-color: rgb(212, 211, 198);
+  background-color: #2b2b2b;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  overflow: hidden;
 }
 .aboutDesc {
   padding: 50px;
   width: 50%;
-  color: #303030;
   align-content: center;
 }
-.aboutDesc span {
-  color: #737373;
-}
 
+.aboutDesc h2 {
+  margin-left: 50px;
+  font-size: 27px;
+}
 .aboutDesc p {
-  margin: 20px;
+  margin: 50px;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .aboutImg {
   margin: 50px;
+  padding-top: 5%;
 }
 .aboutImg img {
   height: 60vh;
@@ -277,7 +276,7 @@ nav a:hover {
 #contact {
   height: 100vh;
   width: 100%;
-  background-color: rgb(199, 232, 250);
+  background-color: #2b2b2b;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -304,7 +303,6 @@ nav a:hover {
 .contact {
   display: flex;
   justify-content: center;
-  color: #303030;
   position: relative;
   top: 15%;
   right: -100%;
@@ -312,13 +310,18 @@ nav a:hover {
 }
 
 label {
-  font-family: sans-serif;
+  font-family: outfit, sans-serif;
+  color: #2b2b2b;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 550;
+  margin-bottom: 10px;
 }
 .contactez-nous {
   width: 700px;
   padding: 0 50px 0 50px;
-  background: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 8px 32px 0 rgba(228, 147, 238, 0.37);
+  background: rgba(128, 127, 127, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(61, 61, 61, 0.37);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   border-radius: 10px;
@@ -333,21 +336,22 @@ form div {
 }
 
 textarea {
-  background-color: #d0b8e7;
+  background-color: #b9b7d9;
   border: none;
   border-radius: 5px;
   font-size: 14px;
-  font-weight: 200;
-  box-shadow: 0 2px 12px 0 rgba(228, 147, 238, 0.37);
+  font-weight: 400;
+  box-shadow: 0 2px 12px 0 rgba(176, 192, 239, 0.2);
 }
 
 input {
   height: 50px;
   padding-left: 10px;
-  background: #d0b8e7;
+  background: #b9b7d9;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 2px 12px 0 rgba(228, 147, 238, 0.37);
+  box-shadow: 0 2px 12px 0 rgba(176, 192, 239, 0.2);
+  font-weight: 400;
 }
 
 #message {
@@ -356,6 +360,7 @@ input {
 }
 
 button {
+  color: #1b1b1b;
   align-self: center;
   margin-top: 20px;
   margin-bottom: 40px;
@@ -364,7 +369,7 @@ button {
   height: 60px;
   font-weight: 500;
   font-size: 18px;
-  background: #b296cd;
+  background: #2b2b2b;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -374,7 +379,7 @@ button {
 
 button:hover {
   transition: 0.3s;
-  color: rgb(213, 229, 237);
+  color: #b9b7d9;
 }
 
 /*--------------------------------------------------------------*/
@@ -384,9 +389,10 @@ button:hover {
 #info {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgb(155, 203, 231);
+  background-color: #2b2b2b;
 }
 #info ul {
   list-style: none;
@@ -394,25 +400,12 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 20px;
-}
-#info .line {
-  width: 50%;
-  height: 1.5px;
-  background-color: #737373;
-  margin: 10px;
-}
-#info li a {
-  text-decoration: none;
-  color: #303030;
+  gap: 10px;
 }
 
-.container1 li {
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 25px;
-  font-weight: 300;
-  padding: 20px 40px 30px;
+#info li a {
+  color: #000;
+  text-decoration: none;
 }
 
 .socials li {
@@ -424,24 +417,13 @@ button:hover {
   height: 28px;
 }
 
-.container2 li {
-  font-size: 16px;
+.mentionsL li {
+  font-size: 14px;
   line-height: 20px;
-  font-weight: 100;
+  font-weight: 400;
   padding: 20px;
 }
 
-/* ANIMATION HOVER */
-
-.container2 li:hover {
-  transition: 0.3s;
-  color: rgb(156, 160, 160);
-}
-
-.container2 li a:hover {
-  transition: 0.3s;
-  color: rgb(156, 160, 160);
-}
 /*--------------------------------------------------------------*/
 
 /* ANIMATIONS KEYFRAMES */
