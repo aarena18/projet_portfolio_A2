@@ -39,7 +39,7 @@ header {
 
 nav a {
   font-size: 14px;
-  color: black;
+  color: #2b2b2b;
   letter-spacing: 2px;
   text-decoration: none;
 }
@@ -60,7 +60,7 @@ nav ul li {
 /* ANIMATION HOVER */
 nav a:hover {
   transition: 0.3s;
-  color: #737373;
+  color: #8c87c0;
 }
 /*--------------------------------------------------------------*/
 
@@ -69,7 +69,6 @@ nav a:hover {
   height: 92vh;
 
   /*TEXTE*/
-  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,10 +85,11 @@ nav a:hover {
   position: absolute;
   left: -100%;
   animation: animText 2s forwards 2.5s;
+  color: #2b2b2b;
 }
 
 #text_banner span {
-  color: #737373;
+  color: #8c87c0;
 }
 
 /*--------------------------------------------------------------*/
@@ -117,7 +117,7 @@ nav a:hover {
 
 #info li a {
   text-decoration: none;
-  color: #303030;
+  color: #2b2b2b;
 }
 
 .socials li {
@@ -135,8 +135,6 @@ nav a:hover {
   font-weight: 100;
   padding: 20px;
 }
-
-/* ANIMATION HOVER */
 
 /*--------------------------------------------------------------*/
 
