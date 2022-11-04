@@ -64,14 +64,17 @@ header {
 #logo img {
   width: 50px;
 }
-
-nav a {
+.responsive-nav,
+#toogle {
+  display: none;
+}
+.full-screen a {
   font-size: 14px;
   letter-spacing: 2px;
   text-decoration: none;
 }
 
-nav ul {
+.full-screen ul {
   list-style: none;
   margin-right: 100px;
   display: flex;
@@ -80,13 +83,13 @@ nav ul {
   float: right;
 }
 
-nav ul li {
+.full-screen ul li {
   margin-left: 100px;
 }
 
 /* ANIMATION HOVER */
 
-nav a:hover {
+.full-screen a:hover {
   transition: 0.3s ease-out;
   color: #605cc1;
 }
@@ -244,7 +247,7 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  overflow: hidden;
+  overflow: scroll;
 }
 .aboutDesc {
   padding: 50px;
@@ -451,6 +454,87 @@ button:hover {
   }
   to {
     right: 5%;
+  }
+}
+/*--------------------------------------------------------------*/
+/* MEDIA @ & RESPONSIVE */
+
+/* mobile */
+
+@media screen and (max-width: 991px) {
+  /* HEADER */
+  nav {
+    height: 60px;
+  }
+
+  .full-screen {
+    display: none;
+    flex-direction: column;
+    height: 220px;
+    margin-top: 20px;
+  }
+
+  .responsive-nav {
+    width: 30px;
+    display: flex;
+    float: right;
+    margin: 0 100px;
+    font-size: 40px;
+    color: #2b2b2b;
+    cursor: pointer;
+  }
+  #toogle:checked + .full-screen {
+    display: flex;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    width: 240px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .responsive-nav:hover {
+    transition: 0.3s ease-out;
+    color: #605cc1;
+  }
+
+  /* ABOUT*/
+
+  .aboutDesc {
+    padding: 50px;
+    width: 50%;
+    align-content: center;
+  }
+  .aboutDesc p {
+    margin: 30px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .aboutImg {
+    margin: 50px;
+  }
+  .aboutImg img {
+    height: 50%;
+    border-radius: 50%;
+  }
+
+  /* CONTACT */
+  #contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
+
+  .contact {
+    width: 50px;
+    height: 75%;
+    justify-content: center;
+    animation: none;
+    right: 20%;
+    top: 55%;
   }
 }
 
