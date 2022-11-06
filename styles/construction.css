@@ -36,6 +36,12 @@ header {
 #logo img {
   width: 50px;
 }
+label {
+  display: none;
+}
+input {
+  display: none;
+}
 
 nav a {
   font-size: 14px;
@@ -156,5 +162,46 @@ nav a:hover {
     left: 7%;
   }
 }
+/*--------------------------------------------------------------*/
 
+/* @MEDIA & RESPONSIVE */
+
+@media screen and (max-width: 991px) {
+  /* HEADER */
+  nav {
+    height: 60px;
+  }
+
+  .full-screen {
+    display: none;
+    flex-direction: column;
+    height: 220px;
+    margin-top: 20px;
+  }
+
+  .responsive-nav {
+    width: 30px;
+    display: flex;
+    float: right;
+    margin: 0 100px;
+    font-size: 40px;
+    color: #2b2b2b;
+    cursor: pointer;
+  }
+  #toogle:checked + .full-screen {
+    display: flex;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    width: 240px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .responsive-nav:hover {
+    transition: 0.3s ease-out;
+    color: #605cc1;
+  }
+}
 /*--------------------------------------------------------------*/

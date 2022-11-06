@@ -372,7 +372,7 @@ button {
   height: 60px;
   font-weight: 500;
   font-size: 18px;
-  background: #2b2b2b;
+  background: #3b3b3b;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -457,9 +457,9 @@ button:hover {
   }
 }
 /*--------------------------------------------------------------*/
-/* MEDIA @ & RESPONSIVE */
+/* @MEDIA & RESPONSIVE */
 
-/* mobile */
+/* mobile medium */
 
 @media screen and (max-width: 991px) {
   /* HEADER */
@@ -530,7 +530,7 @@ button:hover {
 
   .contact {
     width: 50px;
-    height: 75%;
+    height: 85%;
     justify-content: center;
     animation: none;
     right: 20%;
